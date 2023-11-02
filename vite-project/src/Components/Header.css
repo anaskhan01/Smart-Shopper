@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  background-color: #54B4D3;
+  color: white;
+  padding-top: 5px;
+}
+.container h1 {
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn{
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+}
+.btnwishlist{
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  margin-top: 5px;
+}
+nav {
+  display: flex;
+  gap: 50px;
+}
+.cart {
+  margin-top: 5px;
+}

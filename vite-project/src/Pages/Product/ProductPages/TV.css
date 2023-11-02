@@ -1,0 +1,28 @@
+.Electolist{
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+.ElectoData{
+    background: transparent;  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.ElectoData img {
+    width: 250px;
+    height: 250px;
+    mix-blend-mode: multiply;
+  }

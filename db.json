@@ -1,0 +1,86 @@
+{
+  "Mobile": [
+    {
+      "id": 0,
+      "title": "Apple iPhone 15 Pro Max",
+      "price": "₹1,59,900",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/r/5/-original-imagtc3kcmph6ax5.jpeg?q=70"
+    },
+    {
+      "id": 1,
+      "title": "Apple iPhone 15",
+      "price": "₹79,900",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/l/l/-original-imagtc5fz9spysyk.jpeg?q=70"
+    },
+    {
+      "id": 2,
+      "title": "Apple iPhone 15 Plus",
+      "price": "₹89,900",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/6/r/-original-imagtc6fn8fecysv.jpeg?q=70"
+    },
+    {
+      "id": 3,
+      "title": "Apple iPhone 14",
+      "price": "₹61,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70"
+    },
+    {
+      "id": 4,
+      "title": "Apple iPhone 14 Plus",
+      "price": "₹71,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70"
+    },
+    {
+      "id": 5,
+      "title": "Apple iPhone 13",
+      "price": "₹51,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70"
+    },
+    {
+      "id": 6,
+      "title": "Apple iPhone 12",
+      "price": "₹42,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/kg8avm80/mobile/y/7/n/apple-iphone-12-dummyapplefsn-original-imafwg8dpyjvgg3j.jpeg?q=70"
+    },
+    {
+      "id": 7,
+      "title": "Samsung S22 Ultra",
+      "price": "₹83,500",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOAoZbcASb1LnvuQHO7keBfwAb9Z9pdX7kCFe_44AQOvNQ7g_kWyhKwWetKb9r1mA-8aM&usqp=CAU"
+    },
+    {
+      "id": 8,
+      "title": "realme 11 Pro 5G ",
+      "price": "₹27,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/8/d/-original-imagqadpnygfnn2v.jpeg?q=70"
+    },
+    {
+      "id": 9,
+      "title": "Redmi Note 12 Pro 5G",
+      "price": "₹21,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/m/j/o/-original-imaghkvue4yjecju.jpeg?q=70"
+    },
+    {
+      "id": 10,
+      "title": "Samsung S21 FE 5G",
+      "price": "₹44,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/4/x/0/-original-imagtnqjjfgxzpz4.jpeg?q=70"
+    },
+    {
+      "id": 11,
+      "title": "vivo T2x 5G",
+      "price": "₹11,999",
+      "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/c/s/x/-original-imagzjhwaaewgj8r.jpeg?q=70"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

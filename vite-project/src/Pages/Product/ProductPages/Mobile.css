@@ -1,0 +1,28 @@
+.mobilelist{
+    width: 260px;
+    height: 380px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+.mobileData{
+    background: transparent;  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.mobilelist img {
+    width: 200px;
+    height: 250px;
+    mix-blend-mode: multiply;
+  }

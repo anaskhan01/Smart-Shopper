@@ -1,0 +1,28 @@
+.productlist {
+    width: 250px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    /* background-color: lightgray; */
+    border-radius: 5px;
+  }
+  .buttonClass{
+    border: 2px solid #405cf5;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #405cf5;;
+  }
+  .userdata {
+    /* width: 1700px; */
+    margin-left: 100px;
+    background: transparent;  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+  }
