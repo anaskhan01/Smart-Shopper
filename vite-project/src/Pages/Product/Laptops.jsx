@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import SubHeader from "../../Components/SubHeader";
-import "./Laptops.css"
+import "./Laptops.css";
+import { useDispatch } from "react-redux";
+import { add } from "../../Store/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Laptops = () => {
-  const notify = () => toast("Order Placed Successfully");
+  const dispatch = useDispatch();
   const [first, setfirst] = useState([]);
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get("https://mobile-api-ycjb.onrender.com/Laptops")
       .then((response) => setfirst(response.data));
   }, []);
+
+  const handleAdd = (item) => {
+    dispatch(add(item));
+  };
 
   const LaptopData = first
     .filter((item) => {
@@ -28,8 +34,16 @@ const Laptops = () => {
           <img src={item.image} alt="" />
           <h3>{item.title}</h3>
           <p>Price: {item.price};</p>
-          <ToastContainer />
-          <button className="buttonClass" onClick={notify}>Buy Now</button>
+
+          <button className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>Buy Now</button>
+          <button
+            className="buttonClass"
+            onClick={() => {
+              handleAdd(item);
+            }}
+          >
+            Add to Cart
+          </button>
         </div>
       );
     });

@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "./Product.css";
 import SubHeader from "../../Components/SubHeader";
+import { useDispatch } from "react-redux";
+import { add } from "../../Store/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
-  const notify = () => toast("Order Placed Successfully");
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
-      .then((json) =>setData(json));
+      .then((json) => setData(json));
   }, []);
 
   function truncateString(length, inputString) {
@@ -22,6 +25,7 @@ const Product = () => {
       return inputString.slice(0, length) + "...";
     }
   }
+
   const userData = data
     .filter((item) => {
       return search.toLowerCase() === ""
@@ -33,17 +37,22 @@ const Product = () => {
         <div className="productlist" key={item.id}>
           <img src={item.image} alt="" />
           <br />
-          <p>{truncateString(30, item.title)}</p>
+          <p>{truncateString(15, item.title)}</p>
           <p>Price: {item.price}&#36;</p>{" "}
-          <button className="buttonClass" onClick={notify}>Buy Now</button>
-          <ToastContainer />
+          <button
+            className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>
+            Buy Now
+          </button>
+          <button className="buttonClass" onClick={() => handleAdd(item)}>
+            Add to Cart
+          </button>
         </div>
       );
     });
 
-    const handleAdd = (data) => {
-      dispatch(add(data));
-    }
+  const handleAdd = (data) => {
+    dispatch(add(data));
+  };
   return (
     <div>
       <SubHeader />

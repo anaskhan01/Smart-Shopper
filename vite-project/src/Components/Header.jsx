@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import { AiOutlineHeart } from "react-icons/ai";
+import { BiCartAlt } from "react-icons/bi";
 import "./Header.css";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart);
   const nav = useNavigate();
   return (
     <div>
       <div className="container">
-        <h1 onClick={() => nav("/")}>Shopy</h1>
+        <h1 onClick={() => nav("/")}>Smart Shopper</h1>
         <nav>
           <button className="btn" onClick={() => nav("/")}>
             Home
@@ -16,7 +18,8 @@ const Header = () => {
             Products
           </button>
           <button className="btnwishlist" onClick={() => nav("/addcart")}>
-            <AiOutlineHeart />
+            <BiCartAlt  style={{ height: "30px", width: "30px"}} />
+           <span style={{color: "black", fontWeight: "bold"}}> {cart.length} </span>
           </button>
         </nav>
       </div>

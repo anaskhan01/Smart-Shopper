@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import "./TV.css";
 import SubHeader from "../../../Components/SubHeader";
+import { useDispatch } from "react-redux";
+import { add } from "../../../Store/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 const TV = () => {
-  const notify = () => toast("Order Placed Successfully");
+  const dispatch = useDispatch();
   const [first, setfirst] = useState([]);
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get("https://mobile-api-ycjb.onrender.com/TV")
       .then((response) => setfirst(response.data));
   }, []);
+
+  const handleAdd = (item) => {
+    dispatch(add(item));
+  };
 
   const mobileData = first
     .filter((item) => {
@@ -28,8 +34,15 @@ const TV = () => {
           <img src={item.image} alt="" />
           <h3>{item.title}</h3>
           <p>Price: {item.price};</p>
-          <button className="buttonClass" onClick={notify}>Buy Now</button>
-          <ToastContainer />
+          <button className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>Buy Now</button>
+          <button
+            className="buttonClass"
+            onClick={() => {
+              handleAdd(item);
+            }}
+          >
+            Add to Cart
+          </button>
         </div>
       );
     });

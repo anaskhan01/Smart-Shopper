@@ -1,13 +1,21 @@
-
-.mobilelist{
-    width: 260px;
-    height: 380px;
-    margin: 20px;
+.cartlist{
+    width: 250px;
+    height: 350px;
+    margin: 10px;
     padding: 10px;
     border: 2px solid lightgray;
     border-radius: 5px;
 }
-.mobileData{
+.buttonClass{
+    border: 2px solid #405cf5;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: #405cf5;;
+  }
+  .userdata{
+    margin-left: 100px;
     background: transparent;  
     display: flex;
     flex-wrap: wrap;
@@ -15,15 +23,9 @@
     justify-content: center;
     flex-direction: row;
     text-align: center;
-}
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.mobilelist img {
+  }
+  .cartlist img{
     width: 200px;
-    height: 250px;
+    height: 200px;
     mix-blend-mode: multiply;
   }

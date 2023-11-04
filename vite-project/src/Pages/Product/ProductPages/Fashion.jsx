@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import axios from "axios";
 import "./Fashion.css";
 import SubHeader from "../../../Components/SubHeader";
+import { useDispatch } from "react-redux";
+import { add } from "../../../Store/CartSlice";
+import { useNavigate } from "react-router-dom";
+
 
 const Fashion = () => {
-  const notify = () => toast("Order Placed Successfully");
+  const dispatch = useDispatch();
   const [first, setfirst] = useState([]);
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -17,6 +19,9 @@ const Fashion = () => {
       .then((response) => setfirst(response.data));
   }, []);
 
+  const handleAdd = (item) => {
+    dispatch(add(item));
+  };
   const mobileData = first
     .filter((item) => {
       return search.toLowerCase() === ""
@@ -29,15 +34,23 @@ const Fashion = () => {
           <img src={item.image} alt="" />
           <h3>{item.title}</h3>
           <p>Price: {item.price};</p>
-          <button className="buttonClass" onClick={notify}>Buy Now</button>
-          <ToastContainer />
+          <button className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>Buy Now</button>
+          <button
+            className="buttonClass"
+            onClick={() => {
+              handleAdd(item);
+            }}
+          >
+            Add to cart
+          </button>
+      
         </div>
       );
     });
 
   return (
     <div>
-      <SubHeader/>
+      <SubHeader />
       <div className="search">
         <input
           type="text"

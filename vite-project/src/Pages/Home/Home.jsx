@@ -1,14 +1,20 @@
-import React, { useEffect, useState, useContext } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import React, { useEffect, useState} from "react";
 import "react-toastify/dist/ReactToastify.css";
 import "./Home.css";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { add } from "../../Store/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const notify = () => toast("Order Placed Successfully");
+  const dispatch = useDispatch();
   const [data, setData] = useState([]);
   const [restart, setrestart] = useState(false);
+  const navigate = useNavigate();
 
+
+   
+ 
   function searchByTitle(searchTerm) {
     if (searchTerm !== "") {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -36,6 +42,10 @@ const Home = () => {
     }
   }
 
+  const handleAdd = (item) => {
+    dispatch(add(item));
+  };
+
   const userData = data?.map((item) => {
     return (
       <div className="productlist" key={item.id}>
@@ -43,10 +53,10 @@ const Home = () => {
         <br />
         <p>{truncateString(15, item.title)}</p>
         <p>Price: {item.price}&#8377;</p>{" "}
-        <button className="buttonClass" onClick={notify}>
-          Buy Now
+        <button className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>Buy Now</button>
+        <button className="buttonClass" onClick={() => handleAdd(item)}>
+          Add to Cart
         </button>
-        <ToastContainer />
       </div>
     );
   });

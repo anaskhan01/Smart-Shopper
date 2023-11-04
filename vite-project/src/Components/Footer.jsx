@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="main">
       <div className="footer-content">
-        <h3>Shopy</h3>
+        <h3>Smart Shopper</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit
           consequatur a quo non, vero molestias quod eos alias quibusdam et?
@@ -25,7 +25,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          copyright &copy;2023 Shopy. designed by <span>Anas</span>
+          copyright &copy;2023 Smart Shopper. designed by <span>Anas</span>
         </p>
       </div>
     </div>
