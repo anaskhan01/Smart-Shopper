@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import "./Home.css";
 import axios from "axios";
@@ -12,9 +12,6 @@ const Home = () => {
   const [restart, setrestart] = useState(false);
   const navigate = useNavigate();
 
-
-   
- 
   function searchByTitle(searchTerm) {
     if (searchTerm !== "") {
       const lowerCaseSearchTerm = searchTerm.toLowerCase();
@@ -53,7 +50,14 @@ const Home = () => {
         <br />
         <p>{truncateString(15, item.title)}</p>
         <p>Price: {item.price}&#8377;</p>{" "}
-        <button className="buttonClass" onClick={()=>{navigate('/product-detail', {state: item})}}>Buy Now</button>
+        <button
+          className="buttonClass"
+          onClick={() => {
+            navigate("/product-detail", { state: item });
+          }}
+        >
+          Buy Now
+        </button>
         <button className="buttonClass" onClick={() => handleAdd(item)}>
           Add to Cart
         </button>
