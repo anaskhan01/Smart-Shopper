@@ -2,12 +2,7 @@
   background-image: url(http://localhost:5173/src/assets/image.jpg);
   background-size: contain;
 } */
-.h1{
-  /* color: white; */
-  text-align: center;
-  padding-top: 12px;
-  font-weight: 400;
-}
+
 .productlist {
   width: 250px;
   height: 350px;
@@ -17,18 +12,35 @@
   /* background-color: lightgray; */
   border-radius: 5px;
 }
-.buttonClass{
+.buttonClass {
   border: 2px solid #405cf5;
   border-radius: 5px;
   margin: 5px;
   padding: 5px;
   color: white;
-  background-color: #405cf5;;
+  background-color: #405cf5;
 }
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.search-bar {
+  width: 80vw;
+  margin-left: 50px;
+  height: 50px;
+  padding: 5px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .userdata {
   /* width: 1700px; */
   /* margin-left: 100px; */
-  background: transparent;  
+  background: transparent;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

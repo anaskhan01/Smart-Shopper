@@ -44,12 +44,8 @@ const Mobile = () => {
   return (
     <div>
       <SubHeader />
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      <div className="search-container">
+      <input type="text" className="search-bar" placeholder="Search for Products, Brands and More" onChange={(e)=> searchByTitle(e.target.value)}/>
       </div>
       <div className="mobileData">{mobileData}</div>
     </div>

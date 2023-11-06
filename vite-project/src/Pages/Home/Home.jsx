@@ -67,19 +67,14 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="h1">Deals of the Day</h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <input
-          style={{ textAlign: "center" }}
-          onChange={(e) => searchByTitle(e.target.value)}
-          placeholder="Search..."
-        />
+        <div className="search-container">
+        <input type="text" className="search-bar" placeholder="Search for Products, Brands and More" onChange={(e)=> searchByTitle(e.target.value)}/>
+      </div>
+      <div style={{lineHeight: 0.7,height:"200px", paddingTop:"50px", paddingLeft: "300px"}}>
+      <h1 style={{fontSize: "80px", color: "gray"}}>DEALS OF THE DAY</h1>
+      <div style={{display: "flex", justifyContent:"end", marginTop: "20px", marginRight: "364px"}}>
+      <h1 style={{fontSize: "50px", color: "gray"}}>SUPER SALE  TRENDS 2023</h1>
+      </div>
       </div>
       <div className="userdata">{userData}</div>
     </div>
