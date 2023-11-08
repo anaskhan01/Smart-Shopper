@@ -15,12 +15,35 @@
     flex-direction: row;
     text-align: center;
 }
-.search{
+.search-container{
     display: flex;
-    align-items: center;
+    margin: auto;
     justify-content: center;
+    width: 620px;
+    height: 50px;
+  }
+  .search-input{
+    width: 100%;
     margin-top: 10px;
-}
+    font-size: 1rem;
+    text-align: center;
+    border: 1.5px solid lightgrey;
+   
+  }
+  .search-icon{
+    width: 45px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: #54B4D3;;
+    font-size: 1.8rem;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 .FashionData img {
     width: 250px;
     height: 250px;

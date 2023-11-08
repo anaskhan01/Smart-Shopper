@@ -1,29 +1,50 @@
-
-.mobilelist{
-    width: 260px;
-    height: 380px;
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid lightgray;
-    border-radius: 5px;
+.mobilelist {
+  width: 260px;
+  height: 380px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
 }
-.mobileData{
-    background: transparent;  
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
+.mobileData {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
 }
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+.search-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 620px;
+  height: 50px;
+}
+.search-input {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: 1.5px solid lightgrey;
+}
+.search-icon {
+  width: 45px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: #54b4d3;
+  font-size: 1.8rem;
+  border: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .mobilelist img {
-    width: 200px;
-    height: 250px;
-    mix-blend-mode: multiply;
-  }
+  width: 200px;
+  height: 250px;
+  mix-blend-mode: multiply;
+}

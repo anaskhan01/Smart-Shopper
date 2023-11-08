@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Mobile.css";
 import { add } from "../../../Store/CartSlice";
 import { useNavigate } from "react-router-dom";
+import {CiSearch} from 'react-icons/ci'
 
 const Mobile = () => {
   const dispatch = useDispatch();
@@ -45,7 +46,10 @@ const Mobile = () => {
     <div>
       <SubHeader />
       <div className="search-container">
-      <input type="text" className="search-bar" placeholder="Search for Products, Brands and More" onChange={(e)=> searchByTitle(e.target.value)}/>
+        <input type="text" className="search-input" placeholder="Search Shopeer" onChange={(e)=> searchByTitle(e.target.value)}/>
+        <div className="search-icon">
+        <CiSearch/>
+        </div>
       </div>
       <div className="mobileData">{mobileData}</div>
     </div>

@@ -5,6 +5,7 @@ import SubHeader from "../../../Components/SubHeader";
 import { useDispatch } from "react-redux";
 import { add } from "../../../Store/CartSlice";
 import { useNavigate } from "react-router-dom";
+import {CiSearch} from 'react-icons/ci'
 
 
 const Fashion = () => {
@@ -52,7 +53,10 @@ const Fashion = () => {
     <div>
       <SubHeader />
       <div className="search-container">
-      <input type="text" className="search-bar" placeholder="Search for Products, Brands and More" onChange={(e)=> searchByTitle(e.target.value)}/>
+        <input type="text" className="search-input" placeholder="Search Shopeer" onChange={(e)=> searchByTitle(e.target.value)}/>
+        <div className="search-icon">
+        <CiSearch/>
+        </div>
       </div>
       <div className="FashionData">{mobileData}</div>
     </div>

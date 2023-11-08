@@ -5,6 +5,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { add } from "../../Store/CartSlice";
 import { useNavigate } from "react-router-dom";
+import {CiSearch} from 'react-icons/ci'
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -68,13 +69,10 @@ const Home = () => {
   return (
     <div>
         <div className="search-container">
-        <input type="text" className="search-bar" placeholder="Search for Products, Brands and More" onChange={(e)=> searchByTitle(e.target.value)}/>
-      </div>
-      <div style={{lineHeight: 0.7,height:"200px", paddingTop:"50px", paddingLeft: "300px"}}>
-      <h1 style={{fontSize: "80px", color: "gray"}}>DEALS OF THE DAY</h1>
-      <div style={{display: "flex", justifyContent:"end", marginTop: "20px", marginRight: "364px"}}>
-      <h1 style={{fontSize: "50px", color: "gray"}}>SUPER SALE  TRENDS 2023</h1>
-      </div>
+        <input type="text" className="search-input" placeholder="Search Shopeer" onChange={(e)=> searchByTitle(e.target.value)}/>
+        <div className="search-icon">
+        <CiSearch/>
+        </div>
       </div>
       <div className="userdata">{userData}</div>
     </div>

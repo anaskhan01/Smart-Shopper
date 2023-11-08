@@ -10,7 +10,6 @@ const Header = () => {
     <div>
       <div className="container">
         <h1 onClick={() => nav("/")}>Smart Shopper</h1>
-        <nav>
           <button className="btn" onClick={() => nav("/")}>
             Home
           </button>
@@ -21,7 +20,6 @@ const Header = () => {
             <BiCartAlt  style={{ height: "30px", width: "30px"}} />
            <span style={{color: "black", fontWeight: "bold"}}> {cart.length} </span>
           </button>
-        </nav>
       </div>
     </div>
   );
